@@ -1,0 +1,91 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jose",
+      "lastname": "Rodriguez",
+      "rol": "Lider",
+      "Project": 1
+    },
+    {
+      "id": 2,
+      "name": "Florencia",
+      "lastname": "Mansilla",
+      "rol": "Desarrollador",
+      "Project": 1
+    },
+    {
+      "Project": 2,
+      "name": "Pim",
+      "lastname": "Pam",
+      "id": 3
+    },
+    {
+      "Project": 2,
+      "name": "Cosme",
+      "rol": "Actor",
+      "lastname": "Fulanito",
+      "id": 5
+    },
+    {
+      "Project": 3,
+      "name": "Pepita",
+      "rol": " Admistrativo",
+      "lastname": "Pistolera",
+      "id": 6
+    },
+    {
+      "Project": 3,
+      "name": "Jona",
+      "rol": " Tecnico",
+      "lastname": "Archer",
+      "id": 7
+    },
+    {
+      "Project": 66,
+      "name": "Josesita",
+      "rol": "UI/UX",
+      "lastname": "Manuarte",
+      "id": 8
+    },
+    {
+      "Project": 66,
+      "name": "Raul",
+      "rol": "UI/UX",
+      "lastname": "Gaspar",
+      "id": 9
+    }
+  ],
+  "rol": [
+    {
+      "id": 1,
+      "job": "Developer",
+      "tools": [
+        {
+          "master": "JavaScript",
+          "secondary": "Python"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "job": "Tester",
+      "tools": [
+        {
+          "master": "Testing QA",
+          "secondary": "Java"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "ProjectOne"
+    },
+    {
+      "id": 2,
+      "name": "ProjectTwo"
+    }
+  ]
+}
