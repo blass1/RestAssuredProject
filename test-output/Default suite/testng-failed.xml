@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Example_DataProvider">
+      <class name="APIs.APIWorker">
         <methods>
-          <include name="test_delete_DP" invocation-numbers="0"/>
+          <include name="Test_Get"/>
         </methods>
-      </class> <!-- Example_DataProvider -->
+      </class> <!-- APIs.APIWorker -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
