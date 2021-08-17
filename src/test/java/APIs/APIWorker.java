@@ -34,7 +34,7 @@ public class APIWorker {
 			.body()
 			.asString().substring(10, 27);
 		
-		//System.out.println("bearer "+token);
+		System.out.println("bearer "+token);
 		return "bearer "+token;
 	}
 	
