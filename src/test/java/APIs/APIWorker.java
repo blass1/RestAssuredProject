@@ -7,41 +7,41 @@ import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
 
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
+import APIs.Body;
+import Repositories.Repo_Endpoints;
 
 public class APIWorker {
 	
 	public String GetAccessToken() {
 		
-		String token = "";
+		String token_resp = "";
 		
 		baseURI = "https://reqres.in/api/login";
 		
-		JSONObject request = new JSONObject();
+		Body body = new Body();
 		
-		request.put( "email", "eve.holt@reqres.in");
-		request.put("password", "cityslicka");
-		
-		token = given()
+		token_resp = given()
 			.header("Content-Type", "application/json")
 			.contentType(ContentType.JSON)
 			.accept(ContentType.JSON)
-			.body(request.toJSONString())
+			.body(body.access())
 		.when()
-			.post(/*"/api/login"*/)
+			.post()
 		.then()
 			.statusCode(200)
 			.extract()
 			.body()
-			.asString().substring(10, 27);
+			.asString();
 		
-		System.out.println("bearer "+token);
-		return "bearer "+token;
+		return "bearer "+ JsonPath.from(token_resp).get("token");
 	}
 	
 	@Test
-	void Test_Get () {
+	void GET () {
 		
-		baseURI = "https://reqres.in/api/users/2";
+		Repo_Endpoints endpoint = new Repo_Endpoints();
+		baseURI = endpoint.ep_loginTest();
 		
 		String response = given()
 				.header("Content-Type", "application/json", "Authorization", GetAccessToken())
